@@ -309,6 +309,8 @@ Les certificats **SwiftNet PKI** sont nécessaires pour authentifier correctemen
 
 Un utilisateur peut se voir attribuer, dans swift.com, des rôles permettant d’accéder à plusieurs **BIC**.
 
+<img width="684" height="343" alt="image" src="https://github.com/user-attachments/assets/2e785c3d-f1d0-4c14-b9e1-618ad075d936" />
+
 Dans ce cas, l’utilisateur peut sélectionner, sur l’écran de connexion swift.com, le BIC qui doit être visible dans le Basic Tracker et pour lequel les statuts de paiement peuvent être mis à jour.
 
 Pour sélectionner un autre BIC, l’utilisateur doit se déconnecter du Basic Tracker, puis se reconnecter via swift.com et sélectionner un autre BIC.
