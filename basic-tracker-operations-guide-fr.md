@@ -318,101 +318,71 @@ Pour voir simultanément tous les paiements provenant de plusieurs BIC dans le B
 
 <img width="628" height="322" alt="image" src="https://github.com/user-attachments/assets/a47a6526-34f4-4c80-9661-8f2e65e5f9a8" />
 
-# 2.3.1 Accès au Basic Tracker à l’aide de certificats SwiftNet PKI
+### 2.1.5 Plusieurs BIC dans le périmètre des rôles Tracker RBAC
 
-### Configuration pour les utilisateurs de certificats basés sur un token utilisant Internet comme réseau
+Par défaut, les **Distinguished Names (DN)** des utilisateurs auxquels un rôle Tracker RBAC est attribué par leur security officer dans **O2M** ont un seul BIC dans leur périmètre.
 
-1. Vous devez évaluer le nombre de tokens nécessaires pour votre institution, en tenant compte du nombre d’utilisateurs qui vont les utiliser. Prévoyez également suffisamment de tokens de réserve en cas de remplacement. Si nécessaire, vous pouvez commander des tokens personnels supplémentaires auprès de Swift.
+Il est toutefois possible de modifier cette sélection par défaut et de regrouper plusieurs BIC **non-GPI** dans le périmètre RBAC d'un même DN utilisateur.
 
-2. Avant de pouvoir utiliser votre token personnel, vous devez installer le logiciel du token.
+Plus précisément, lorsqu'un DN utilisateur confirme les statuts de paiement de plusieurs banques non-GPI appartenant à la même hiérarchie, les clients doivent remplir et soumettre le formulaire électronique suivant uniquement lorsqu'ils utilisent des certificats basés sur un token ou un HSM.
 
-3. Créez et enregistrez les utilisateurs de tokens personnels pour chaque utilisateur final nécessitant un accès au Basic Tracker. Cette opération est effectuée par votre responsable de la sécurité dans l’application **Online Operations Manager (O2M)**.
+Ce formulaire électronique ne peut pas être utilisé pour les utilisateurs qui s'appuient sur une adresse e-mail et un mot de passe swift.com, car swift.com définit déjà son propre accès à plusieurs BIC non-GPI.
 
-   Les certificats existants peuvent être réutilisés, par exemple si les utilisateurs finaux utilisent déjà des certificats sur token personnel.
+Après soumission, un DN utilisateur peut avoir dans son périmètre d'autres BIC non-GPI. Il peut ainsi suivre et mettre à jour, dans le Basic Tracker, toutes les transactions impliquant les BIC non-GPI définis dans son périmètre.
 
-4. Attribuez les rôles **RBAC** du Tracker appropriés aux utilisateurs finaux concernés afin qu’ils puissent accéder au Basic Tracker.
+## 2.2 Disponibilité du service
 
-   Comme à l’étape 3, l’attribution des rôles RBAC est également effectuée par votre responsable de la sécurité SwiftNet dans O2M.
+### 2.2.1 Indisponibilité planifiée
 
-   Selon leur rôle et leurs responsabilités, les certificats **SwiftNet PKI** utilisés par les utilisateurs finaux doivent être configurés avec les rôles RBAC appropriés associés au **DN**.
+Swift planifie certaines dates et heures durant lesquelles le Basic Tracker sera indisponible.
 
-### Rôles RBAC
+Swift informe préalablement ses utilisateurs des périodes d'indisponibilité planifiées sur [**www.swift.com**](http://www.swift.com).
 
-| Rôle | Description |
-| --- | --- |
-| **FullViewer** | Permet à un utilisateur final au sein d’une institution de voir toutes les transactions dans lesquelles son institution joue un rôle. |
-| **Update** | Permet à un utilisateur final au sein d’une institution de mettre à jour les transactions de paiement dans lesquelles son institution joue un rôle. |
-| **Admin** | Permet à un utilisateur final de gérer la configuration du Basic Tracker de son institution. Par exemple, l’utilisateur peut demander des notifications d’alerte au moyen du MT 199 ou du trck.003 depuis le Tracker. |
-| **TMTransactionViewer** | Permet à un utilisateur final de consulter, via la fonctionnalité Rich Data Access de Case Management, les données enrichies qui ne peuvent pas être transmises depuis le dernier message pacs.008 enrichi échangé sur FINplus vers le MT 103 historique échangé sur FIN. Il permet également, via Transaction Copy, de consulter toutes les données disponibles pour une transaction donnée. |
+L'indisponibilité planifiée peut notamment être due aux événements suivants :
 
-**Remarque :** lorsqu’un utilisateur possède le rôle RBAC **Update**, il peut également consulter ces transactions dans l’interface graphique du Basic Tracker.
+- interruption liée à une maintenance planifiée des équipements ;
+- modifications système planifiées, par exemple :
+  - modifications logicielles ou matérielles ;
+  - modifications de configuration ;
+  - tests de continuité d'activité.
 
-**Remarque :** le rôle **Admin** ne permet pas à l’utilisateur final de voir ou de consulter les transactions. Ce rôle est limité aux opérations de configuration.
+> **Remarque :** les utilisateurs qui accèdent au Basic Tracker avec une adresse e-mail/un mot de passe et une vérification en deux étapes doivent également tenir compte des périodes d'indisponibilité planifiées de swift.com.
 
-**Remarque :** le rôle RBAC **TMTransactionViewer** doit toujours être utilisé en combinaison avec au moins un autre rôle RBAC, par exemple **FullViewer, TransactionViewer, TransactionUpdate** ou **Update**.
+### 2.2.2 Indisponibilité non planifiée
 
-Les rôles du tableau précédent sont également étendus aux transactions et configurations **Swift Go** lorsque l’institution de l’utilisateur est abonnée et provisionnée pour le service Swift Go.
+Si Swift prend connaissance d'un problème affectant le Basic Tracker, Swift lance toute opération de récupération ou de basculement relevant de sa responsabilité et nécessaire à la restauration du Basic Tracker.
 
----
+Si le système **Live principal** du Basic Tracker tombe en panne, Swift met en œuvre les procédures nécessaires pour basculer vers le système de secours et restaurer le Basic Tracker dès que cela est raisonnablement possible.
 
-## Rôles supplémentaires pour les clients Case Management
+Les fonctionnalités du Basic Tracker décrites dans ce document supposent des conditions normales d'exploitation.
 
-Les clients Swift abonnés à **Case Management** bénéficient de privilèges supplémentaires et de rôles RBAC additionnels afin de permettre une séparation des privilèges et des responsabilités des utilisateurs.
+Toutefois, dans certains scénarios de catastrophe, très improbables, par exemple l'indisponibilité complète d'un centre d'exploitation Swift, Swift peut être dans l'impossibilité de fournir tout ou partie de ces fonctionnalités.
 
-Les privilèges des rôles RBAC précédents sont étendus aux clients Case Management, qui bénéficient également des rôles suivants :
+### 2.2.3 Résilience
 
-| Rôle | Description |
-| --- | --- |
-| **FullViewer** | Permet à ses utilisateurs de consulter les opérations relatives aux transactions, c’est-à-dire les virements de crédit client, ainsi qu’aux investigations Stop and Recall qui concernent les BIC définis dans le périmètre du rôle RBAC FullViewer. |
-| **TransactionViewer** | Permet à ses utilisateurs de consulter les opérations relatives aux transactions de virement de crédit client concernant les BIC définis dans le périmètre du rôle RBAC TransactionViewer. |
-| **Update** | Permet à ses utilisateurs de consulter, mettre à jour, initier, traiter et approuver les opérations relatives aux transactions de virement de crédit client et aux investigations Stop and Recall concernant les BIC définis dans le périmètre du rôle RBAC Update. |
-| **TransactionUpdate** | Permet à ses utilisateurs de consulter, mettre à jour et approuver les opérations relatives aux transactions de virement de crédit client concernant les BIC définis dans le périmètre du rôle RBAC TransactionUpdate. |
-| **SensitiveData** | Permet à ses utilisateurs de consulter les opérations contenant des données sensibles, telles que le numéro de compte. |
-| **Admin** | Permet à ses utilisateurs de consulter et de mettre à jour les opérations relatives aux paramètres concernant les BIC définis dans le périmètre du rôle RBAC Admin. |
+Le Basic Tracker est hébergé sur **deux sites dans la zone européenne**, et sa base de données est distribuée sur ces deux sites.
 
-Les rôles RBAC sont associés à un service.
+## 2.3 Réseau et connectivité
 
-Les noms de services pour l’interface graphique du Basic Tracker sont :
+La configuration technique requise repose sur **WebAccess**.
 
-- **swift.tracker!p** pour le service Test and Training ;
-- **swift.tracker** pour le service Live.
+**Swift Web Access** prend en charge plusieurs combinaisons de connectivité réseau et d'options d'authentification pour la connexion entre les utilisateurs finaux et l'application du fournisseur de services.
 
-Par défaut, un seul BIC peut être défini dans le périmètre du rôle RBAC du **Distinguished Name (DN)** de l’utilisateur.
+- Les certificats **SwiftNet PKI**, hébergés sur un **HSM** ou un **token**, constituent des options disponibles pour l'authentification des utilisateurs.
 
-Si un DN utilisateur possède des privilèges sur plusieurs BIC non-GPI appartenant à la même hiérarchie, le DN doit remplir le formulaire électronique prévu à cet effet lorsqu’il utilise des certificats basés sur un token ou un HSM.
+> **Remarque :** les certificats basés sur un token peuvent se connecter aux services Swift Web Access via Internet ou via **MV-SIPN**. Les certificats basés sur HSM peuvent uniquement se connecter via **MV-SIPN**.
 
-Une fois le formulaire soumis, le responsable de la sécurité peut déterminer dans **O2M** quels BIC non-GPI doivent être associés au périmètre des rôles RBAC accordés au DN utilisateur.
+- **Adresse e-mail et mot de passe swift.com**, associés à une vérification en deux étapes. Cette option d'authentification utilise le processus de connexion de swift.com.
 
-### Activation et configuration du token
+> **Remarque :** cette méthode d'authentification est uniquement disponible via **MV-SIPN**.
 
-1. Activez le token personnel via le **Swift Certificate Centre**.
+Si Swift Web Access ne reconnaît pas les certificats SwiftNet PKI, l'option d'authentification reposant sur l'adresse e-mail et le mot de passe, avec vérification en deux étapes, est automatiquement sélectionnée.
 
-2. Configurez le réseau pour **Swift Web Access**. Votre administrateur réseau doit effectuer les opérations suivantes :
+### 2.3.1 Accès au Basic Tracker avec des certificats SwiftNet PKI
 
-   a. La configuration réseau doit être correctement établie afin que le navigateur installé sur le PC de chaque utilisateur puisse accéder au serveur Web du fournisseur de services Swift Web Access via **HTTPS**.
+Les utilisateurs qui disposent déjà de l'infrastructure nécessaire pour se connecter à d'autres services SwiftNet accessibles depuis un navigateur, tels que **O2M**, peuvent réutiliser cette infrastructure.
 
-   b. Lors de l’utilisation de Swift Web Access dans **Alliance Web Platform Server-Embedded** avec **Alliance Gateway**, une configuration réseau supplémentaire est nécessaire.
 
-   c. Acheminez le trafic HTTPS vers SwiftNet à l’aide de proxys HTTP, de dispositifs NAT ou d’une combinaison des deux.
-
-   d. Si le proxy HTTP est installé sur un hôte différent de celui d’Alliance Gateway, l’hôte du proxy HTTP doit utiliser le **DNS SwiftNet** pour résoudre les noms d’hôtes des fournisseurs de services se terminant par `.swiftnet.sipn.swift.com`.
-
-   e. Les pare-feu utilisés par le membre Swift Web Access doivent autoriser le trafic HTTPS des navigateurs vers les serveurs Web des fournisseurs de services.
-
-3. Configurez les navigateurs des utilisateurs finaux :
-
-   a. Configurez les paramètres de sécurité.  
-   b. Ajoutez les sites de confiance.  
-   c. Installez **SConnect**.
-
-4. Accédez au Basic Tracker à l’aide des URL de déploiement suivantes :
-
-| Application | URL de déploiement |
-| --- | --- |
-| Tracker (Test and Training) | `https://tracker-test.browse.swiftnet.sipn.swift.com/` |
-| Tracker (Live) | `https://tracker.browse.swiftnet.sipn.swift.com/` |
-
----
 
 # 2.3.2 Accès au Basic Tracker à l’aide d’une adresse e-mail / d’un mot de passe et de la vérification en deux étapes
 
