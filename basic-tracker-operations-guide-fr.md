@@ -1,4 +1,4 @@
-<img width="628" height="177" alt="image" src="https://github.com/user-attachments/assets/2fbaff15-83ba-48d8-99e5-1159cb9d222b" /># Basic Tracker
+# Basic Tracker
 
 ## Guide des opérations
 
