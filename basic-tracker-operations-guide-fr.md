@@ -2230,11 +2230,6 @@ Les tableaux de cette section répertorient les différents codes de statut et c
 | INVA | X021 | La valeur du champ SettlementMethod n’est pas autorisée. | Message de confirmation |
 | INVA | X021 | La valeur du champ ClearingSystem n’est pas autorisée. | Message de confirmation |
 | INVA | X021 | Seule une confirmation de statut ACCC est autorisée. | Message de confirmation |
-
-### Suite des messages d’erreur relatifs aux paiements et aux confirmations de statut
-
-| Statut | Code | Description | Associé à |
-| --- | --- | --- | --- |
 | INVA | X021 | La valeur du champ Reject Reason Code n’est pas autorisée. | Message de confirmation |
 | INVA | X026 | La partie informée par Tracker et l’agent ordonné d’une confirmation de statut Swift Go doivent être des banques participant au service Swift Go. | Confirmation Swift Go |
 | WARN | X040 | Les étapes envoyées par l’agent du créancier avec la méthode de règlement INGA ne sont pas suivies. | pacs.008. Message de confirmation (INVA). Aucune notification d’alerte n’est envoyée par Tracker. |
@@ -2257,11 +2252,6 @@ Les tableaux de cette section répertorient les différents codes de statut et c
 | RJCR | FRNA | La demande doit être transmise à l’agent suivant. | Message d’initiation Stop and Recall (MT 192, MT 199, CancelTransaction - API). Consulter le Stop and Recall Rulebook pour connaître la syntaxe spécifique utilisée pour RJCR/FRNA. |
 | RJCR | X015 | La transaction gCCT est dans un état rejeté. | Message d’initiation Stop and Recall (MT 192, MT 199, CancelTransaction - API) |
 | RJCR | X015 | Un processus SRP est déjà en cours pour cette transaction gCCT. | Message d’initiation Stop and Recall (MT 192, MT 199, CancelTransaction - API) |
-
-### Suite des messages d’erreur SRP
-
-| Statut | Code | Description | Associé à |
-| --- | --- | --- | --- |
 | RJCR | X015 | Ce BIC n’est pas autorisé à initier le SRP, car il ne fait pas partie de la transaction gCCT. | Message d’initiation Stop and Recall (MT 192, MT 199, CancelTransaction - API) |
 | RJCR | X015 | L’identifiant du type de service de cette demande doit être 002. | Message d’initiation Stop and Recall (MT 192, MT 199, CancelTransaction - API) |
 | RJCR | X015 | Aucune transaction gCCT n’a été identifiée pour cet UETR. | Message d’initiation Stop and Recall (MT 192, MT 199, CancelTransaction - API) |
