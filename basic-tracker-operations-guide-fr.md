@@ -1,4 +1,4 @@
-
+<img width="308" height="161" alt="image" src="https://github.com/user-attachments/assets/7f721640-4f23-416b-b1f7-2a1de7f6aafd" />
 # Basic Tracker
 
 ## Guide des opérations
@@ -309,13 +309,15 @@ Les certificats **SwiftNet PKI** sont nécessaires pour authentifier correctemen
 
 Un utilisateur peut se voir attribuer, dans swift.com, des rôles permettant d’accéder à plusieurs **BIC**.
 
-<img width="684" height="343" alt="image" src="https://github.com/user-attachments/assets/2e785c3d-f1d0-4c14-b9e1-618ad075d936" />
-
 Dans ce cas, l’utilisateur peut sélectionner, sur l’écran de connexion swift.com, le BIC qui doit être visible dans le Basic Tracker et pour lequel les statuts de paiement peuvent être mis à jour.
+
+<img width="684" height="343" alt="image" src="https://github.com/user-attachments/assets/2e785c3d-f1d0-4c14-b9e1-618ad075d936" />
 
 Pour sélectionner un autre BIC, l’utilisateur doit se déconnecter du Basic Tracker, puis se reconnecter via swift.com et sélectionner un autre BIC.
 
 Pour voir simultanément tous les paiements provenant de plusieurs BIC dans le Basic Tracker, l’utilisateur doit utiliser soit un **token**, soit un certificat **HSM**.
+
+<img width="628" height="322" alt="image" src="https://github.com/user-attachments/assets/a47a6526-34f4-4c80-9661-8f2e65e5f9a8" />
 
 # 2.3.1 Accès au Basic Tracker à l’aide de certificats SwiftNet PKI
 
@@ -415,6 +417,8 @@ Une fois le formulaire soumis, le responsable de la sécurité peut déterminer 
 
 # 2.3.2 Accès au Basic Tracker à l’aide d’une adresse e-mail / d’un mot de passe et de la vérification en deux étapes
 
+<img width="654" height="340" alt="image" src="https://github.com/user-attachments/assets/1e5dd98f-38a5-4de3-83d6-affbf54f1093" />
+
 Les utilisateurs disposant d’un compte **swift.com** peuvent accéder au Basic Tracker avec une adresse e-mail, un mot de passe et une vérification en deux étapes.
 
 Ce mécanisme d’authentification repose sur les éléments suivants :
@@ -426,6 +430,8 @@ Ce mécanisme d’authentification repose sur les éléments suivants :
 **Remarque :** si votre institution utilise un fournisseur tiers pour se connecter à Swift, par exemple un **service bureau**, Swift recommande de contacter ce fournisseur afin de configurer l’accès au Basic Tracker.
 
 ## Configuration pour les utilisateurs de comptes swift.com utilisant MV-SIPN comme réseau
+
+<img width="654" height="180" alt="image" src="https://github.com/user-attachments/assets/eb8bb588-addb-465c-b812-ecef58af5799" />
 
 1. Créez un compte **swift.com**.
 
@@ -509,6 +515,8 @@ Vous pouvez voir :
 
 Tous les autres agents impliqués dans la transaction ne sont pas divulgués.
 
+<img width="654" height="198" alt="image" src="https://github.com/user-attachments/assets/8163e6b7-b370-43cc-96e9-6daab2432c55" />
+
 **Remarque :** les agents sont affichés aux clients non-GPI conformément à ces règles. Dans l’exemple du document, **Me** représente un client non-GPI.
 
 Cet exemple suppose que l’agent du débiteur et l’agent du créancier sont présents dans le message reçu et/ou envoyé. Dans le cas contraire, ces agents ne sont eux aussi pas divulgués au client.
@@ -527,6 +535,8 @@ Ils ont accès aux mises à jour de statut qu’ils ont fournies, y compris les 
 
 La page d’accueil du Basic Tracker est composée de trois sections principales.
 
+<img width="629" height="421" alt="image" src="https://github.com/user-attachments/assets/cac0e7fc-33ab-4d67-83fd-017450556e28" />
+
 ### Recherche
 
 La fonction de recherche permet aux utilisateurs de rechercher et de suivre les transactions dans lesquelles leur banque a été ou est actuellement impliquée.
@@ -538,15 +548,13 @@ Les critères de recherche suivants peuvent être utilisés :
 
 La fonction de recherche parcourt la base de données du Tracker afin de récupérer le résultat approprié parmi toutes les transactions générées au cours des **14 derniers jours calendaires**.
 
----
-
-## Opérations en attente auprès de la banque de l’utilisateur
+### Opérations en attente auprès de la banque de l’utilisateur
 
 Cette section comptabilise tous les paiements qui ont atteint les BIC compris dans le périmètre de l’utilisateur au cours des deux dernières semaines et pour lesquels l’utilisateur doit fournir une confirmation dans le délai requis.
 
 La section **Total operations pending** est divisée en deux sous-sections :
 
-### In progress
+#### In progress
 
 Il s’agit des paiements arrivés auprès de la ou des banques de l’utilisateur et pour lesquels aucune confirmation n’a encore été fournie.
 
@@ -556,15 +564,13 @@ Ces paiements en attente doivent être mis à jour, ou approuvés lorsque le par
 
 Toute confirmation fournie dans ce contexte est invalidée, y compris lorsqu’un agent du créancier recrédite le compte du client créancier.
 
-### On hold
+#### On hold
 
 Il s’agit des paiements arrivés auprès de la ou des banques de l’utilisateur et qui ont déjà été mis à jour par l’utilisateur avec le statut intermédiaire **On hold**.
 
 Le nombre de **Total operations pending** correspond à l’agrégation des opérations en attente ayant les statuts **In progress** et **On hold**.
 
----
-
-# Score Universal Confirmations
+### Score Universal Confirmations
 
 Le score **Universal Confirmations** et son code couleur affichés sur la page d’accueil du Basic Tracker permettent aux institutions financières d’identifier rapidement si elles respectent les règles métier définies dans le **Universal Confirmations Rulebook**.
 
@@ -586,9 +592,7 @@ En français :
 
 Après avoir cliqué sur le score affiché sur la page d’accueil, une section dédiée au score Universal Confirmations de l’utilisateur apparaît.
 
----
-
-# Swift Go
+### Swift Go
 
 Dans le Basic Tracker, les utilisateurs abonnés à **Swift Go** peuvent consulter leur propre niveau de conformité ainsi que celui des autres clients Swift Go par rapport aux règles métier définies dans le **Swift Go Rulebook**.
 
@@ -598,29 +602,29 @@ Les administrateurs **GPI Observer Insights** de l’institution cliente peuvent
 
 Pour plus d’informations sur le calcul des scores Swift Go, il faut se reporter à la section **Observer Insights** du **Swift Go Rulebook**.
 
----
-
-# Case Management
+### Case Management
 
 Les utilisateurs abonnés à **Case Management** peuvent identifier, depuis la page d’accueil du Basic Tracker, les opérations **SRP** remontant jusqu’aux deux semaines précédentes.
 
 **Remarque :** la section SRP apparaît uniquement sur la page d’accueil lorsqu’un client Case Management a reçu des opérations SRP en attente au cours des deux semaines précédentes.
 
----
+<img width="629" height="354" alt="image" src="https://github.com/user-attachments/assets/8ea9777e-0492-4e7f-aa3b-ca217bc2a02d" />
 
-# 3.2 Paiements en attente
+## 3.2 Paiements en attente
 
 Les paiements en attente devant être confirmés par l’utilisateur sont affichés dans un tableau de résultats.
+
+<img width="629" height="342" alt="image" src="https://github.com/user-attachments/assets/22726187-4ec1-4f74-b569-0b1f10089ea7" />
 
 Ce tableau est rapidement accessible depuis la page d’accueil en cliquant sur la section **Total operations pending**.
 
 Le tableau comporte plusieurs fonctionnalités.
 
-## Filtres
+### Filtres
 
 Des filtres de type **facette** sont disponibles en haut du tableau afin de permettre aux utilisateurs de parcourir et d’analyser facilement les résultats.
 
-### Tracking number
+#### Tracking number
 
 Ce filtre permet à l’utilisateur d’identifier, parmi toutes les opérations en attente, le paiement qui l’intéresse sur la base de son **UETR**.
 
@@ -636,7 +640,7 @@ Plus précisément :
 
 En revanche, la recherche depuis la page d’accueil reste désactivée pour les utilisateurs Universal Confirmations non conformes/rouges.
 
-### From - To
+#### From - To
 
 La valeur par défaut de ce filtre est :
 
@@ -647,7 +651,7 @@ Le tableau affiche donc initialement tous les paiements en attente ayant atteint
 
 Ce filtre peut être modifié afin d’afficher les paiements en attente sur la période souhaitée.
 
-### Status
+#### Status
 
 Ce filtre présente les deux statuts possibles d’un paiement en attente auprès de la banque de l’utilisateur :
 
@@ -658,7 +662,7 @@ Si l’utilisateur clique depuis la page d’accueil sur **Total operations pend
 
 La même logique s’applique au statut **On hold**.
 
-### 4-eyes approval
+#### 4-eyes approval
 
 Les utilisateurs peuvent activer le filtre **Pending my approval** afin de se concentrer uniquement sur les paiements nécessitant leur approbation selon le mécanisme **4-eyes**.
 
@@ -668,9 +672,7 @@ Ce critère permet d’exclure les transactions contenant des branches de retour
 
 Ces transactions possèdent le statut **In-Progress**, mais les utilisateurs ne peuvent pas mettre à jour les flux de retour dans l’interface graphique.
 
----
-
-# Tableau de résultats
+### Tableau de résultats
 
 Le tableau répertorie les paiements en attente auprès de la ou des banques de l’utilisateur et qui doivent être mis à jour par celui-ci avec un statut final conformément au **Universal Confirmations Rulebook**.
 
@@ -691,9 +693,7 @@ Les différents types de résultats disposent de présentations différentes :
 - l’initiateur ne pouvant pas effectuer l’approbation 4-eyes, un chevron classique indique qu’il ne peut pas agir sur cette opération ;
 - si quelqu’un rejette une transaction pendant le processus 4-eyes, une barre rouge apparaît.
 
----
-
-# Affichage dans l’heure locale
+### Affichage dans l’heure locale
 
 Par défaut, toutes les heures sont affichées selon l’heure locale de la transaction.
 
@@ -705,9 +705,7 @@ Le choix de cette option est enregistré dans le **local storage** du navigateur
 
 Il reste conservé tant que l’utilisateur utilise le même poste/plateforme et ne supprime pas le cache du navigateur.
 
----
-
-# Export
+### Export
 
 Les résultats du tableau peuvent être exportés à l’aide du bouton **Export**.
 
@@ -717,9 +715,7 @@ L’export ne contient pas la totalité des résultats de recherche si l’utili
 
 Les colonnes de l’export sont celles qui sont affichées à l’écran.
 
----
-
-# 3.3 Paiements Swift Go en attente
+## 3.3 Paiements Swift Go en attente
 
 Les clients **Swift Go** peuvent filtrer les transactions Swift Go en attente en cliquant sur **Swift Go Payment**.
 
@@ -729,17 +725,21 @@ Cette fonctionnalité est visible uniquement pour les clients Swift Go.
 
 Elle peut être combinée avec les filtres de transactions de paiement existants décrits dans la section **Pending Payments**.
 
----
+<img width="629" height="195" alt="image" src="https://github.com/user-attachments/assets/f0916e4e-6c96-4fac-9414-23d3f8a940d0" />
 
-# 3.4 Stop and Recall en attente
+## 3.4 Stop and Recall en attente
 
 Les demandes **Stop and Recall** en attente pour lesquelles les clients **Case Management** doivent fournir une réponse, conformément aux règles métier définies dans le **Stop and Recall for Case Management Rulebook**, sont affichées dans le tableau de résultats correspondant.
 
-# 3.5 Vue de la transaction
+<img width="629" height="477" alt="image" src="https://github.com/user-attachments/assets/9dc2465c-2b04-4008-951c-6fad0ada1b36" />
+
+## 3.5 Vue de la transaction
 
 La **vue de la transaction** du Basic Tracker affiche les détails d’une transaction. Elle présente le **statut le plus récent** de la transaction.
 
-## Transaction Copy
+<img width="629" height="373" alt="image" src="https://github.com/user-attachments/assets/7ffa64b6-5a37-49cc-a03b-b7a61bfdfaf3" />
+
+### Transaction Copy
 
 Les utilisateurs du Basic Tracker peuvent voir un nouveau bouton **Transaction Copy**.
 
@@ -753,17 +753,19 @@ Pour plus d’informations, voir la section **Opérations manuelles dans la GUI 
 
 Les informations génériques suivantes concernant la transaction sont disponibles en haut de l’écran.
 
+<img width="629" height="36" alt="image" src="https://github.com/user-attachments/assets/05a3207d-6a00-401d-bc19-71ab76a3c3d8" />
+
 ### Dernier statut
 
 Quatre valeurs sont possibles :
 
-### Completed
+#### Completed
 
 Les paiements **Completed** sont ceux dont le statut de transaction est **ACCC**, c’est-à-dire lorsque le compte du bénéficiaire a été crédité.
 
 Les paiements terminés sont affichés en **vert**.
 
-### In progress
+#### In progress
 
 Les paiements **In progress** sont ceux pour lesquels le dernier statut reçu est :
 
@@ -772,7 +774,7 @@ Les paiements **In progress** sont ceux pour lesquels le dernier statut reçu es
 
 Les paiements en cours sont affichés en **gris**.
 
-### On hold
+#### On hold
 
 Les paiements **On hold** sont ceux pour lesquels le dernier statut reçu est :
 
@@ -782,7 +784,7 @@ Les paiements **On hold** sont ceux pour lesquels le dernier statut reçu est :
 
 Les paiements en attente sont affichés en **orange**.
 
-### Rejected
+#### Rejected
 
 Les paiements **Rejected** sont ceux dont le statut de transaction est **RJCT**.
 
@@ -790,138 +792,93 @@ Les paiements rejetés sont affichés en **rouge**.
 
 Des informations supplémentaires sont fournies concernant le statut, notamment la **date et l’heure de la dernière mise à jour de la transaction**.
 
----
-
-## Montant indiqué dans l’instruction
+### Montant indiqué dans l’instruction
 
 Le montant indiqué dans l’instruction provient du champ **Instructed Amount and Currency** du message **pacs.008**, ou du **champ 33B** du message **MT 103**.
 
----
-
-## Numéro de suivi
+### Numéro de suivi
 
 Le numéro de suivi correspond à l’**UETR** transporté dans les messages ou les appels API qui constituent la transaction.
 
----
-
-# Ligne de métro
+### Ligne de métro
 
 La **metro line** est la représentation graphique du cheminement du paiement dans la transaction.
 
 Elle utilise plusieurs éléments graphiques principaux.
 
-## Formes
+### Formes
 
-### Clients débiteurs
+- Clients débiteurs : Les clients débiteurs sont représentés par des **carrés**.
 
-Les clients débiteurs sont représentés par des **carrés**.
+<img width="308" height="161" alt="image" src="https://github.com/user-attachments/assets/0424ade4-1199-4e55-8ca8-9a4e7e5f5ca3" />
 
-### Clients créanciers
+- Clients créanciers: Les clients créanciers sont également représentés par des **carrés**.
 
-Les clients créanciers sont également représentés par des **carrés**.
+<img width="303" height="167" alt="image" src="https://github.com/user-attachments/assets/6c57586a-f6e5-4945-a184-e16f9046db3f" />
 
-### Participants à la transaction
+- Participants à la transaction : Les participants à la transaction sont représentés par des **cercles**.
 
-Les participants à la transaction sont représentés par des **cercles**.
+<img width="299" height="571" alt="image" src="https://github.com/user-attachments/assets/5fe9ec50-b026-44e3-b069-09a771d66ff6" />
 
 Chaque cercle contient des informations détaillées sur la banque qu’il représente.
 
 **Remarque :** la boîte bancaire correspondant à votre propre entité contient le logo **Me** et intègre des informations supplémentaires qui ne figurent pas dans les boîtes bancaires des contreparties.
 
----
-
-## Informations bancaires masquées
-
 Si l’agent du débiteur et/ou l’agent du créancier n’ont pas été identifiés par un **BIC** dans le virement de crédit client reçu ou envoyé, les informations contenues dans les boîtes bancaires ne sont pas divulguées.
 
----
+<img width="260" height="413" alt="image" src="https://github.com/user-attachments/assets/28a96bb9-9b07-443e-91b3-b8e6aec90dd7" />
 
-## Flux de paiement
+<img width="260" height="403" alt="image" src="https://github.com/user-attachments/assets/c470880e-db1d-476b-8d30-8a27b2892ddc" />
 
-Les cercles et les carrés sont reliés par des lignes afin d’indiquer le **flux de paiement** dans la transaction.
+- Les cercles et les carrés sont reliés par des lignes afin d’indiquer le **flux de paiement** dans la transaction.
 
----
+<img width="605" height="269" alt="image" src="https://github.com/user-attachments/assets/c9d22394-d3a3-41db-a061-fa5b7db37d32" />
 
-# Couleurs de la ligne de métro
+### Couleurs de la ligne de métro
 
 Les couleurs permettent de visualiser rapidement l’état du paiement.
 
-## Gris
+- Gris : Le **gris** indique que la banque n’a pas encore reçu le paiement. Une confirmation de paiement est attendue dès que le paiement atteint la banque.
 
-Le **gris** indique que la banque n’a pas encore reçu le paiement.
+<img width="399" height="783" alt="image" src="https://github.com/user-attachments/assets/e95b8df3-d322-4e94-a736-088d60c8a49a" />
 
-Une confirmation de paiement est attendue dès que le paiement atteint la banque.
+- Moitié verte / moitié grise : Une ligne de métro **moitié verte et moitié grise** indique que la banque a reçu le paiement et qu’elle doit le confirmer dans un délai de **deux jours ouvrés** afin de respecter le **Universal Confirmations Rulebook**.
 
----
+<img width="386" height="726" alt="image" src="https://github.com/user-attachments/assets/295413ad-2602-44c4-b456-74a15628d630" />
 
-## Moitié verte / moitié grise
+- Vert : Le **vert** indique que la banque a reçu et confirmé le paiement. **Aucune action supplémentaire n’est requise.**
 
-Une ligne de métro **moitié verte et moitié grise** indique que la banque a reçu le paiement et qu’elle doit le confirmer dans un délai de **deux jours ouvrés** afin de respecter le **Universal Confirmations Rulebook**.
+<img width="260" height="645" alt="image" src="https://github.com/user-attachments/assets/a570add7-da20-4698-a51f-819a3f30b87a" />
 
----
+- Boîte du client bénéficiaire moitié verte / moitié grise : Une boîte du client bénéficiaire **moitié verte et moitié grise** indique que la banque du bénéficiaire a **partiellement crédité le client**. Le client n’a donc pas encore été crédité intégralement.
 
-## Vert
+<img width="256" height="185" alt="image" src="https://github.com/user-attachments/assets/5a2d1fb4-b315-4c82-9f42-940780b6d9c3" />
 
-Le **vert** indique que la banque a reçu et confirmé le paiement.
+- Vert avec une ligne rouge : Une ligne **verte avec une ligne rouge** indique que la banque a reçu le paiement et l’a **rejeté**.
 
-**Aucune action supplémentaire n’est requise.**
+<img width="264" height="281" alt="image" src="https://github.com/user-attachments/assets/91bbb5c1-ed4e-49e3-844c-fcc4ec7342f3" />
 
----
+### Ligne pleine ou ligne en pointillés
 
-## Boîte du client bénéficiaire moitié verte / moitié grise
+- Une **ligne en pointillés** indique une incertitude concernant l’exécution du paiement.
 
-Une boîte du client bénéficiaire **moitié verte et moitié grise** indique que la banque du bénéficiaire a **partiellement crédité le client**.
+<img width="605" height="178" alt="image" src="https://github.com/user-attachments/assets/e8adf12d-30e8-4750-bbf3-cf29a9ff45be" />
 
-Le client n’a donc pas encore été crédité intégralement.
-
----
-
-## Vert avec une ligne rouge
-
-Une ligne **verte avec une ligne rouge** indique que la banque a reçu le paiement et l’a **rejeté**.
-
----
-
-# Ligne pleine ou ligne en pointillés
-
-Une **ligne en pointillés** indique une incertitude concernant l’exécution du paiement.
-
-### Ligne verte en pointillés
-
-Une ligne verte en pointillés accompagnée de la mention :
-
-**undisclosed bank(s)**
-
-indique qu’il peut y avoir, ou non, une ou plusieurs banques impliquées dans la transaction à l’endroit où cette mention apparaît.
-
-### Ligne grise en pointillés
-
-Une ligne grise en pointillés indique que la chaîne de transaction n’est pas encore connue.
-
-Il peut donc y avoir, ou non, d’autres banques intermédiaires impliquées dans la transaction avant que le paiement n’atteigne la banque du bénéficiaire.
-
-### Paiement envoyé en dehors de FIN
-
+Une ligne verte en pointillés accompagnée de la mention : **undisclosed bank(s)** indique qu’il peut y avoir, ou non, une ou plusieurs banques impliquées dans la transaction à l’endroit où cette mention apparaît. Une ligne grise en pointillés indique que la chaîne de transaction n’est pas encore connue. Il peut donc y avoir, ou non, d’autres banques intermédiaires impliquées dans la transaction avant que le paiement n’atteigne la banque du bénéficiaire. 
 Si le paiement est envoyé en dehors de **FIN**, la ligne en pointillés est accompagnée d’une **flèche en pointillés**.
 
----
+<img width="605" height="113" alt="image" src="https://github.com/user-attachments/assets/0776a643-70e0-4fb5-b228-aca398dbf03c" />
 
-## Ligne pleine
+- Une **ligne pleine** indique qu’il existe une certitude concernant la manière dont le paiement est exécuté.
 
-Une **ligne pleine** indique qu’il existe une certitude concernant la manière dont le paiement est exécuté.
+<img width="605" height="84" alt="image" src="https://github.com/user-attachments/assets/aaa06a14-38fe-4582-8d1f-678ae3a1a93c" />
 
----
-
-### Transaction dans laquelle la banque de l’utilisateur n’est pas impliquée
-
-Lorsqu’un utilisateur recherche une transaction dans laquelle sa banque n’est pas impliquée, aucune **metro line** n’est affichée.
-
-Seules des informations limitées sont affichées dans l’en-tête de la transaction :
+**Remarque :** Lorsqu’un utilisateur recherche une transaction dans laquelle sa banque n’est pas impliquée, aucune **metro line** n’est affichée. Seules des informations limitées sont affichées dans l’en-tête de la transaction :
 
 - le dernier statut ;
 - le numéro de suivi.
 
----
+<img width="628" height="84" alt="image" src="https://github.com/user-attachments/assets/e74e3f91-cdd1-46ac-95ff-b49f43a8350b" />
 
 # 3.6 Vue de la transaction avec flux de retour
 
