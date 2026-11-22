@@ -1,5 +1,4 @@
-<img width="308" height="161" alt="image" src="https://github.com/user-attachments/assets/7f721640-4f23-416b-b1f7-2a1de7f6aafd" />
-# Basic Tracker
+<img width="628" height="177" alt="image" src="https://github.com/user-attachments/assets/2fbaff15-83ba-48d8-99e5-1159cb9d222b" /># Basic Tracker
 
 ## Guide des opérations
 
@@ -826,7 +825,7 @@ Chaque cercle contient des informations détaillées sur la banque qu’il repr�
 
 Si l’agent du débiteur et/ou l’agent du créancier n’ont pas été identifiés par un **BIC** dans le virement de crédit client reçu ou envoyé, les informations contenues dans les boîtes bancaires ne sont pas divulguées.
 
-<img width="260" height="413" alt="image" src="https://github.com/user-attachments/assets/28a96bb9-9b07-443e-91b3-b8e6aec90dd7" />
+<img width="260" height="413" alt="image" src="https://github.com/user-attachments/assets/28a96bb9-9b07-443e-91b3-b8e6aec90dd7" /> <br>
 
 <img width="260" height="403" alt="image" src="https://github.com/user-attachments/assets/c470880e-db1d-476b-8d30-8a27b2892ddc" />
 
@@ -903,9 +902,7 @@ c’est-à-dire :
 
 pour afficher le flux de retour.
 
----
-
-## Visibilité du flux de retour
+<img width="628" height="327" alt="image" src="https://github.com/user-attachments/assets/9d87cd4f-4cdb-4448-9d8d-c5c1b1f143b2" />
 
 Si l’utilisateur possède dans son périmètre un **BIC participant au flux de retour**, la GUI du Basic Tracker présente le flux de retour complet à l’utilisateur.
 
@@ -960,9 +957,9 @@ Par exemple :
 
 correspond au **montant indiqué dans l’instruction de retour**.
 
-## 3.6 Vue de la transaction avec flux de retour (suite)
-
 Les mêmes règles de visibilité s’appliquent aux retours de virements de crédit client dans le flux aller. L’agent non-GPI a une visibilité sur le segment envoyé et sur celui reçu.
+
+<img width="628" height="328" alt="image" src="https://github.com/user-attachments/assets/0099e61e-8b31-473e-a253-7e31d81ea435" />
 
 ## 3.7 Vue de la transaction avec un segment PMI
 
@@ -998,15 +995,21 @@ Dans le cas où un participant non-GPI envoie un segment PMI en V qui ne passe p
 
 La capture d’écran suivante présente un exemple de la manière dont les segments PMI sont affichés dans Basic Tracker.
 
+<img width="628" height="272" alt="image" src="https://github.com/user-attachments/assets/518fa307-5434-418f-bc48-373cf233b9c6" />
+
 Lorsqu’une PMI en V ne parvient pas à traiter le paiement et renvoie à l’expéditeur un message pacs.002 contenant un statut RJCT, le Tracker enregistre automatiquement cette mise à jour de statut de rejet.
 
 ## 3.8 Vue de la transaction avec un segment Network Interoperability
 
 L’exemple suivant montre comment Basic Tracker présente une transaction comprenant une mise à jour de statut fournie par une infrastructure de marché de paiement (*Payment Market Infrastructure*, PMI) utilisant le service Network Interoperability.
 
+<img width="628" height="340" alt="image" src="https://github.com/user-attachments/assets/7b7ecb40-e6f7-4991-8a59-926339a6f63d" />
+
 Pour ces mises à jour effectuées au nom d’un autre établissement (*on-behalf-of updates*), une zone d’informations supplémentaire est affichée, comme indiqué dans la capture d’écran précédente. Elle précise l’établissement qui a fourni la mise à jour de statut.
 
 L’exemple suivant montre comment une mise à jour effectuée au nom d’un autre établissement, fournie par un agent GPI utilisant le service Network Interoperability, est présentée à un client non-GPI dans Basic Tracker.
+
+<img width="628" height="331" alt="image" src="https://github.com/user-attachments/assets/fac2b8ca-98e4-4375-a9c7-133ddeba60c7" />
 
 ## 3.9 Vue de la transaction avec des interruptions de messages
 
@@ -1032,6 +1035,8 @@ Le Tracker continue de suivre les messages ultérieurs liés à la transaction a
 
 La capture d’écran suivante présente un exemple de la manière dont Basic Tracker affiche un message envoyé par l’agent du débiteur qui a été interrompu.
 
+<img width="628" height="246" alt="image" src="https://github.com/user-attachments/assets/06fe46f4-8a64-4685-9098-9a19bf90b9bb" />
+
 ## 3.10 Vue de la transaction avec les opérations Stop and Recall
 
 Les utilisateurs disposant de BIC Case Management définis dans le périmètre de leurs rôles RBAC FullViewer et/ou Update peuvent voir, dans la vue de la transaction, les demandes Stop and Recall (SRP) susceptibles d’avoir une incidence sur la transaction analysée.
@@ -1047,9 +1052,20 @@ Dans la vue de la transaction, les clients Case Management peuvent identifier :
 La vue de la transaction Basic Tracker évolue pour refléter la progression de la demande SRP :
 
 - Vue de la transaction Basic Tracker lorsqu’une demande SRP a été initiée.
+
+<img width="605" height="381" alt="image" src="https://github.com/user-attachments/assets/cc03238a-9b82-4535-93c3-56236d57be51" />
+
 - Vue de la transaction Basic Tracker lorsqu’une demande SRP a été attribuée et qu’une réponse est en attente.
+
+<img width="605" height="382" alt="image" src="https://github.com/user-attachments/assets/0238326a-0111-4751-863b-4297c7d3bdb0" />
+
 - Vue de la transaction Basic Tracker lorsqu’une demande SRP a été acceptée et que la transaction a été rejetée.
+
+<img width="605" height="381" alt="image" src="https://github.com/user-attachments/assets/1054bfeb-9dc5-4153-8ba0-d8207b93c844" />
+
 - Vue de la transaction Basic Tracker lorsqu’une demande SRP a été refusée et que la transaction a poursuivi sa propagation.
+
+<img width="605" height="382" alt="image" src="https://github.com/user-attachments/assets/a40615c7-c672-4449-8e27-d34715fcea4b" />
 
 ## 3.11 Opérations manuelles dans l’interface graphique : mises à jour des paiements
 
@@ -1081,6 +1097,8 @@ Chaque fois qu’un paiement atteint la banque de l’utilisateur, le cercle sit
 
 Cela indique que l’utilisateur doit confirmer le paiement conformément aux règles du *Universal Confirmations Rulebook*.
 
+<img width="263" height="491" alt="image" src="https://github.com/user-attachments/assets/32448f6c-71be-4ed3-b422-a1991a14239f" />
+
 Un paiement peut être mis à jour avec quatre statuts différents.
 
 ### J’ai crédité le paiement (*I credited the payment*)
@@ -1089,7 +1107,7 @@ Lorsque le client bénéficiaire a été crédité après réception d’un vire
 
 Le code de statut ISO 20022 ACCC (*Accepted Settlement Completed*) indique que le règlement sur le compte du client bénéficiaire a été effectué.
 
-Règles de saisie :
+<img width="628" height="149" alt="image" src="https://github.com/user-attachments/assets/51a5fb1e-2921-4c36-9dba-7be74d4a0ab2" />
 
 - L’utilisateur ne peut pas modifier le champ *Received amount* (montant reçu).
 - Le champ *My deducts* (mes déductions) est défini à zéro par défaut. Le champ *Credited amount* (montant crédité) reprend par défaut le montant reçu.
@@ -1103,6 +1121,8 @@ Règles de saisie :
 ### J’ai transféré le paiement (*I transferred the payment*)
 
 Lorsque le destinataire du virement de crédit client est un intermédiaire et qu’il ne transmet pas le paiement au participant suivant via Swift (MT 103 sur FIN ou pacs.008 sur SwiftNet), Swift recommande aux utilisateurs de mettre à jour le statut du paiement en sélectionnant « J’ai transféré le paiement ».
+
+<img width="628" height="188" alt="image" src="https://github.com/user-attachments/assets/088656f2-d37e-4bbc-91bb-dca6ff450808" />
 
 Le code de statut ISO 20022 ACSP (*Settlement in Progress*) indique que la transaction nécessite encore un traitement supplémentaire avant de pouvoir être considérée comme terminée.
 
@@ -1148,6 +1168,8 @@ Cette confirmation intermédiaire peut également être utilisée lorsque l’é
 
 Le code de statut ISO 20022 ACSP (*Settlement in Progress*) doit être utilisé pour indiquer que la transaction est toujours en attente.
 
+<img width="628" height="139" alt="image" src="https://github.com/user-attachments/assets/3fe01b7f-fcc8-4d69-8552-9de963aa99d6" />
+
 L’utilisateur peut sélectionner l’une des trois valeurs proposées dans le panneau de mise à jour.
 
 ### J’ai rejeté le paiement (*I rejected the payment*)
@@ -1158,6 +1180,8 @@ Le code de statut ISO 20022 RJCT (*Rejected*) indique que la transaction a été
 
 Cette confirmation doit toujours être fournie lorsqu’un virement de crédit client est rejeté, quel que soit le rôle de l’initiateur du rejet dans la transaction.
 
+<img width="628" height="139" alt="image" src="https://github.com/user-attachments/assets/8211e95c-bdee-4c4c-9d47-5d5e025aaca7" />
+
 L’utilisateur peut sélectionner l’une des valeurs proposées dans la liste déroulante du panneau de mise à jour.
 
 Lorsque l’utilisateur clique sur « Confirm status update » (Confirmer la mise à jour du statut), le panneau se ferme et une notification de confirmation s’affiche.
@@ -1165,6 +1189,8 @@ Lorsque l’utilisateur clique sur « Confirm status update » (Confirmer la mis
 ### Approuver ou rejeter une opération
 
 Le panneau d’approbation présente tous les détails qui ont été renseignés dans le panneau de mise à jour du paiement.
+
+<img width="628" height="110" alt="image" src="https://github.com/user-attachments/assets/bf726d81-67cc-4462-becd-995052ce367e" />
 
 Pour approuver ou rejeter une opération selon le principe du contrôle à quatre yeux (*4-eyes approval*), un utilisateur doit initier l’action et un autre utilisateur doit l’approuver.
 
@@ -1185,11 +1211,11 @@ Cette deuxième réponse peut être :
 - une réponse définitive, indiquant que la demande SRP a été acceptée ou refusée par l’agent destinataire ;
 - ou une nouvelle réponse indiquant que la demande est toujours en attente, si les 10 jours calendaires n’ont pas été suffisants pour permettre à l’agent destinataire de clôturer la demande.
 
-## 3.12 Opérations manuelles dans l’interface graphique : demandes Stop and Recall (suite)
-
 ### Initier une demande Stop and Recall
 
 Lorsqu’un paiement a été initié ou relayé par erreur, avec des informations incorrectes ou de manière frauduleuse, un client Case Management disposant du rôle RBAC Update peut voir apparaître le bouton « Initiate Stop and Recall » (Initier une demande Stop and Recall).
+
+<img width="628" height="395" alt="image" src="https://github.com/user-attachments/assets/a232c2f4-6ffd-4fc2-a668-14e7be6a7b2d" />
 
 La sélection d’un motif Stop and Recall est obligatoire avant de cliquer sur « Initiate Stop and Recall ».
 
@@ -1203,6 +1229,8 @@ Plus précisément, si la vérification préalable de l’utilisateur destinatai
 
 Les clients Case Management disposant du rôle RBAC Update et identifiés par le Tracker comme agents destinataires d’une demande SRP (*SRP assignee agents*) doivent répondre à cette demande dans le délai défini dans le *Stop and Recall for Case Management Rulebook*.
 
+<img width="628" height="430" alt="image" src="https://github.com/user-attachments/assets/8b0eee79-cb47-4ba0-84a7-b89e81171a45" />
+
 ## 3.13 Opérations manuelles dans l’interface graphique : fonctionnalité Rich Data Access
 
 Cette fonctionnalité vise à proposer une alternative cohérente et plus efficace au processus bilatéral de demande d’informations (*Request for Information*, RFI), décrit dans le document *CBPR+ Data Integrity Market Practice Guidance*.
@@ -1213,7 +1241,11 @@ Elle permet de supprimer la dépendance vis-à-vis de l’intermédiaire précé
 
 Les utilisateurs Swift SUPE ou PSPA disposant du rôle RBAC Update, qui ont reçu ou envoyé un virement de crédit client historique au format MT dans le cadre d’une transaction initialement initiée sous forme de paiement pacs.008 échangé sur FINplus, peuvent voir le bouton « Initiate rich data case » (Initier un dossier de données enrichies) sur l’écran des détails de la transaction dans l’interface Basic Tracker.
 
+<img width="628" height="379" alt="image" src="https://github.com/user-attachments/assets/fc4d67f6-1f41-4471-9dd7-21c7be2a010f" />
+
 Après avoir cliqué sur « Initiate rich data case », le panneau d’initiation du dossier s’ouvre.
+
+<img width="605" height="416" alt="image" src="https://github.com/user-attachments/assets/b1092d86-57f6-4468-9b23-66da01a0e801" />
 
 - Si le BIC inclus dans le périmètre du rôle RBAC Update de l’utilisateur est abonné à Case Management, l’utilisateur doit sélectionner le code motif de dossier RICH dans la liste déroulante.
 - Dans le cas contraire, le Tracker préremplit tous les champs avec les valeurs par défaut appropriées.
@@ -1224,6 +1256,8 @@ Plus précisément, si le BIC inclus dans le périmètre du rôle RBAC Update es
 
 Dès que le dossier RICH est initié, Basic Tracker le clôture automatiquement et fournit, en réponse, un lien vers les éléments de données enrichies.
 
+<img width="628" height="432" alt="image" src="https://github.com/user-attachments/assets/0f58ffd0-4397-4847-a71e-aad79db70de0" />
+
 ### Consulter les éléments de données enrichies
 
 Le dossier apparaît alors dans l’écran « Cases in transaction » (Dossiers de la transaction) de l’interface Tracker.
@@ -1231,6 +1265,8 @@ Le dossier apparaît alors dans l’écran « Cases in transaction » (Dossiers 
 Les utilisateurs disposant du rôle RBAC TMTransactionViewer, associé au rôle RBAC FullViewer et/ou Update, peuvent cliquer sur le lien des données enrichies pour consulter ces éléments.
 
 L’écran propose également une option permettant de copier et d’exporter les données, par exemple pour alimenter une application locale de filtrage (*screening application*).
+
+<img width="628" height="354" alt="image" src="https://github.com/user-attachments/assets/e3575e4e-74ac-4193-ac7b-4d950f5e1a09" />
 
 ## 3.14 Opérations manuelles dans l’interface graphique : vue Transaction Copy
 
@@ -1253,7 +1289,11 @@ Si l’utilisateur dispose d’un BIC dans son périmètre autorisé qui peut co
 
 Si la transaction existe dans Transaction Manager, mais qu’aucun des BIC du périmètre de l’utilisateur n’est autorisé à la consulter, l’option « Transaction Copy » apparaît en gris et ne peut pas être sélectionnée.
 
+<img width="628" height="335" alt="image" src="https://github.com/user-attachments/assets/deb779a2-7294-40ad-b045-5364457c844c" />
+
 Lorsque l’utilisateur clique sur « Transaction Copy », Basic Tracker vérifie d’abord si l’utilisateur dispose de plusieurs BIC dans le périmètre de son rôle RBAC TMTransactionViewer et si un ou plusieurs de ces BIC figurent également dans la transaction Basic Tracker.
+
+---
 
 Les BIC inclus dans le périmètre de TMTransactionViewer correspondent à ceux des rôles RBAC suivants :
 
@@ -1264,6 +1304,8 @@ Les BIC inclus dans le périmètre de TMTransactionViewer correspondent à ceux 
 
 Le rôle TMTransactionViewer ne possède pas son propre périmètre de BIC.
 
+---
+
 Si l’utilisateur est autorisé pour plusieurs BIC dans son périmètre, mais qu’un seul de ces BIC figure également dans la transaction Basic Tracker, Basic Tracker demande les détails de la Transaction Copy à Transaction Manager en utilisant :
 
 - l’UETR de la transaction ;
@@ -1271,6 +1313,8 @@ Si l’utilisateur est autorisé pour plusieurs BIC dans son périmètre, mais q
 - le type de transaction correspondant à la transaction Basic Tracker, à savoir un virement de crédit client.
 
 Si l’utilisateur est autorisé pour plusieurs BIC dans son périmètre et que plusieurs de ces BIC figurent également dans la transaction Basic Tracker, l’interface lui demande de sélectionner le BIC qu’il souhaite utiliser pour interroger Transaction Manager au sujet de la Transaction Copy.
+
+<img width="329" height="158" alt="image" src="https://github.com/user-attachments/assets/a9d29c53-cc4b-4e36-9f3b-2b506cf83fc0" />
 
 Une fois le BIC sélectionné, Basic Tracker demande les détails de la Transaction Copy selon le processus décrit précédemment.
 
@@ -1297,11 +1341,17 @@ L’utilisateur peut naviguer dans les détails de la Transaction Copy en dével
 
 **Remarque :** l’exemple de Transaction Copy présenté dans le guide concerne un virement de crédit client qui ne fait pas partie d’une transaction contenant un flux de couverture. Par conséquent, l’onglet relatif au flux de couverture n’est pas affiché.
 
+<img width="628" height="352" alt="image" src="https://github.com/user-attachments/assets/791b7f96-3f4c-4651-b4ee-384ade14e589" />
+
 ### Transaction Copy : flux principal (Principal Flow)
+
+<img width="628" height="352" alt="image" src="https://github.com/user-attachments/assets/353b5c79-ee58-48a2-8eaa-2c7a5f67fa23" />
 
 ### Option d’exportation PDF
 
 L’interface Basic Tracker propose une option « Export PDF » permettant à l’utilisateur d’exporter les détails de la Transaction Copy au format PDF.
+
+<img width="628" height="644" alt="image" src="https://github.com/user-attachments/assets/5edb34d4-e616-4556-a626-f31ed7967617" />
 
 ## 3.15 Opérations manuelles dans l’interface graphique : recherche Transaction Copy
 
@@ -1309,9 +1359,13 @@ Afin de permettre aux utilisateurs de Basic Tracker d’interroger la Transactio
 
 Cette fonctionnalité permet aux utilisateurs d’interroger la Transaction Copy pour les transferts entre institutions financières, même si les utilisateurs de Basic Tracker n’ont pas accès aux transactions du service Swift GPI Financial Institution Transfer Tracker.
 
-Sur la page d’accueil de Basic Tracker, un nouveau lien est affiché pour permettre à l’utilisateur d’accéder à l’écran de recherche Transaction Copy.
+Sur la page d’accueil de Basic Tracker, un nouveau lien est affiché pour permettre à l’utilisateur d’accéder à l’écran de recherche Transaction Copy (**Transaction Copy search**).
 
-Ce lien redirige l’utilisateur vers l’écran de recherche Transaction Copy.
+<img width="628" height="296" alt="image" src="https://github.com/user-attachments/assets/f43e3bf6-b1b2-4bf0-b9fe-15d442e0d60f" />
+
+Ce lien redirige l’utilisateur vers l’écran de recherche Transaction Copy (**Transaction Copy search**).
+
+<img width="628" height="206" alt="image" src="https://github.com/user-attachments/assets/d6df08dd-39ba-42af-b7d7-a1e9261c8d82" />
 
 L’utilisateur doit :
 
@@ -1373,8 +1427,6 @@ Dès qu’une institution financière passe sous le seuil, elle entre dans une p
 
 Pendant cette période d’amélioration, le score de l’établissement apparaît en orange.
 
-## 3.16 Score Universal Confirmations (suite)
-
 Si une institution financière ne met pas à jour au moins 80 % de ses virements de crédit client en attente (messages MT 103 ou pacs.008), contenus dans les transactions initiées au cours de la semaine évaluée, en moins de deux jours ouvrables, et ce pendant plus de 12 semaines consécutives comportant du trafic de virements de crédit client, elle se situe sous le seuil requis et sa période d’amélioration est terminée.
 
 Elle est alors considérée comme non conforme aux règles métier Universal Confirmations et son score apparaît en rouge.
@@ -1413,21 +1465,36 @@ Les cinq cas d’utilisation suivants illustrent le fonctionnement de cette fonc
 Les informations sont présentées :
 
 - sur la page d’accueil ;
+
+<img width="581" height="389" alt="image" src="https://github.com/user-attachments/assets/b60fb610-e8c4-4f83-9c48-dc18c1d6e5ee" />
+
 - sur l’écran Universal Confirmations.
+
+<img width="581" height="389" alt="image" src="https://github.com/user-attachments/assets/80c1430d-7ea8-4fc4-bf4e-1f94d0e6841d" />
 
 **Exemple 2 : l’institution financière ne respecte pas les règles métier Universal Confirmations et entre dans sa période d’amélioration de 12 semaines, avec du trafic de virements de crédit client.**
 
 Les informations sont présentées :
 
 - sur la page d’accueil ;
+
+<img width="581" height="389" alt="image" src="https://github.com/user-attachments/assets/a4322d06-d0ea-445d-9f42-2cb1a1182bf9" />
+
 - sur l’écran Universal Confirmations.
+
+<img width="581" height="389" alt="image" src="https://github.com/user-attachments/assets/f3e6248f-85b3-42d1-b49a-800161db3dbc" />
 
 **Exemple 3 : l’institution financière ne respecte pas les règles métier Universal Confirmations pendant plus de 12 semaines consécutives comportant du trafic de virements de crédit client et a perdu l’accès à ses fonctionnalités de suivi.**
 
 Les informations sont présentées :
 
 - sur la page d’accueil ;
+
+<img width="581" height="390" alt="image" src="https://github.com/user-attachments/assets/b4cb3a7b-4b77-410f-8346-a8aa2d16b428" />
+
 - sur l’écran Universal Confirmations.
+
+<img width="581" height="389" alt="image" src="https://github.com/user-attachments/assets/b303c605-e5b8-410f-90fd-d98a90fd5a9d" />
 
 **Exemple 4 : l’utilisateur possède plusieurs BIC non-GPI dans son périmètre. Certains BIC sont conformes, tandis que d’autres ne le sont pas.**
 
@@ -1437,6 +1504,18 @@ Le score Universal Confirmations affiché dans l’indicateur circulaire est aut
 
 **Remarque :** un utilisateur est considéré comme non conforme et perd par conséquent l’accès aux fonctionnalités de recherche dès qu’un seul des BIC non-GPI associés à son périmètre passe au rouge.
 
+- sur la page d’accueil ;
+
+<img width="581" height="148" alt="image" src="https://github.com/user-attachments/assets/15b42203-18f9-483e-91a4-0b95965a9d3b" />
+
+- sur l’écran Universal Confirmations avec multiple BICs dans le périmtre :
+
+<img width="581" height="208" alt="image" src="https://github.com/user-attachments/assets/f79c5053-c483-4e2d-912c-e6d034b884e7" /> <br>
+
+<img width="581" height="255" alt="image" src="https://github.com/user-attachments/assets/a48ba27a-7db3-4389-8c84-1e103f6e7097" /> <br>
+
+<img width="581" height="256" alt="image" src="https://github.com/user-attachments/assets/a8f9d110-7b0f-4a91-95a8-3cc71bf00a9b" />
+
 **Exemple 5 : aucun score n’est disponible pour l’institution financière.**
 
 Ce cas peut se présenter lorsque l’institution financière a uniquement envoyé des virements de crédit client, sans en avoir reçu, et/ou lorsqu’elle est une infrastructure de marché de paiement utilisant une topologie en V.
@@ -1444,24 +1523,26 @@ Ce cas peut se présenter lorsque l’institution financière a uniquement envoy
 Les informations correspondantes sont présentées :
 
 - sur la page d’accueil ;
+
+<img width="581" height="390" alt="image" src="https://github.com/user-attachments/assets/482c5f1c-10b0-4656-a05a-d903763e9631" />
+
 - sur l’écran Universal Confirmations.
+
+<img width="581" height="390" alt="image" src="https://github.com/user-attachments/assets/350d493d-4305-4f7c-9132-25075005e5db" />
 
 ## 3.17 Statut de conformité Universal Confirmations des autres banques
 
-Un nouvel onglet a été introduit afin de permettre aux utilisateurs respectant les règles métier Universal Confirmations de rechercher et d’analyser le statut de conformité d’autres entités, GPI ou non-GPI.
+Un nouvel onglet a été introduit afin de permettre aux utilisateurs respectant les règles métier Universal Confirmations de rechercher et d’analyser le statut de conformité d’autres entités, GPI ou non-GPI. Cet onglet permet de consulter le statut de conformité des autres établissements, qui peut être vert ou rouge.
 
-Cet onglet permet de consulter le statut de conformité des autres établissements, qui peut être vert ou rouge.
+**Remarque :** l’onglet de conformité des autres banques (*Other bank's compliance*) est uniquement accessible aux utilisateurs qui respectent les règles métier Universal Confirmations. Dès qu’un BIC du périmètre de l’utilisateur passe au rouge, cet onglet est désactivé.
 
-**Remarque :** l’onglet de conformité des autres banques (*Other bank's compliance*) est uniquement accessible aux utilisateurs qui respectent les règles métier Universal Confirmations.
+<img width="628" height="305" alt="image" src="https://github.com/user-attachments/assets/e201e755-f512-4dbb-9b0b-a878a605c1cc" /> <br>
 
-Dès qu’un BIC du périmètre de l’utilisateur passe au rouge, cet onglet est désactivé.
+<img width="628" height="341" alt="image" src="https://github.com/user-attachments/assets/cbc79e2e-b0a6-480e-aba0-62fa9e961fae" />
 
-Le nouvel onglet permet aux utilisateurs de rechercher une autre banque à partir de l’un des critères suivants :
+Le nouvel onglet permet aux utilisateurs de rechercher une autre banque à partir de l’un des critères suivants : son BIC, son nom, son pays, sa ville.
 
-- son BIC ;
-- son nom ;
-- son pays ;
-- sa ville.
+<img width="628" height="333" alt="image" src="https://github.com/user-attachments/assets/4c5fd9d2-2410-4687-8d74-9671610160f8" />
 
 Les résultats de la recherche apparaissent dans un tableau.
 
@@ -1477,7 +1558,11 @@ Le nombre de semaines pendant lesquelles les banques ont conservé un statut don
 
 Les résultats de recherche peuvent être exportés dans un fichier Excel à tout moment.
 
+<img width="628" height="332" alt="image" src="https://github.com/user-attachments/assets/d7f23a86-49ae-4732-bc33-c659c5d2cbc3" />
+
 En fonction des critères de recherche utilisés, plusieurs résultats peuvent apparaître dans le tableau.
+
+<img width="628" height="342" alt="image" src="https://github.com/user-attachments/assets/1a3a271e-ae57-4ba7-a437-7d5a3a1dcac1" />
 
 ## 3.18 Score Case Management
 
@@ -1499,6 +1584,8 @@ L’interface graphique Basic Tracker est composée de deux sections :
 1. **My case management score (vue personnelle)** : cette section présente votre propre indice de qualité Case Management pour le BIC sélectionné dans la liste déroulante.
 2. **Other bank’s case management compliance (vue communautaire)** : cette section présente le statut de conformité Case Management des autres banques.
 
+<img width="628" height="144" alt="image" src="https://github.com/user-attachments/assets/fce6980e-609f-4aca-b07e-58bca1ef567f" />
+
 ### Calcul de l’indice de qualité Case Management
 
 L’indice de qualité Case Management calcule le score moyen pondéré du service SRP.
@@ -1518,17 +1605,23 @@ Nombre de demandes SRP pour lesquelles l’agent destinataire a fourni :
 
 dans un délai de 10 jours calendaires à compter de l’initiation de la demande SRP, rapporté au nombre total de demandes SRP reçues par cet agent au cours du mois évalué.
 
-Un exemple est présenté dans le guide.
+**Exemple :**
+
+<img width="628" height="251" alt="image" src="https://github.com/user-attachments/assets/cf4ffd52-89b9-402e-934e-47c987e2e733" />
 
 ### Mois évalué, période d’observation et mois de publication / actualisation
 
 L’indice de qualité Case Management est calculé chaque mois pour toutes les réponses SRP relatives aux demandes SRP reçues au cours d’un mois donné.
+
+<img width="628" height="560" alt="image" src="https://github.com/user-attachments/assets/505f066f-911e-4da4-b567-994b36d1cc91" />
 
 ### Période de calibration Case Management
 
 Étant donné que l’indice de qualité Case Management est une nouvelle fonctionnalité, une période de calibration de six mois est définie afin d’ajuster ou de corriger toute anomalie éventuelle dans les mesures.
 
 Pendant cette période de calibration, l’indice et les scores SRP dédiés sont accessibles uniquement à votre banque (la vue publique n’est pas proposée).
+
+<img width="628" height="499" alt="image" src="https://github.com/user-attachments/assets/66293508-a1a8-4e41-9295-89077e79af7b" />
 
 Votre indice de qualité de gestion des dossiers (*Case Management*) apparaît toujours en vert, même s’il est inférieur au seuil de conformité de 90 %.
 
@@ -1538,11 +1631,15 @@ Les scores de gestion des dossiers affichés dans votre propre vue utilisent le 
 
 - **Vert**
 
+<img width="605" height="478" alt="image" src="https://github.com/user-attachments/assets/ed809235-eb1f-4ab3-8284-25c1fa574e9e" />
+
 La couleur verte indique que l’indice de qualité de gestion des dossiers de l’entité est égal ou supérieur à 90 %. Cela signifie que l’entité respecte les règles métier de gestion des dossiers définies dans le *Stop and Recall for Case Management Rulebook*.
 
 La couleur verte est visible aussi bien dans votre propre vue que dans la vue publique, après la période de calibration.
 
 - **Orange**
+
+<img width="605" height="481" alt="image" src="https://github.com/user-attachments/assets/02f539d5-58df-4d17-b255-9fc763f376a2" />
 
 La couleur orange indique que l’indice de qualité de gestion des dossiers de l’entité est inférieur à 90 %. Cela signifie que l’entité ne respecte pas les règles métier de gestion des dossiers, mais qu’elle se trouve encore dans sa période d’amélioration, fixée à 6 mois.
 
@@ -1551,6 +1648,8 @@ La période d’amélioration de 6 mois est réinitialisée dès que le BIC a é
 Une entité ayant un statut orange est uniquement affichée dans sa vue privée. Pendant cette période, son statut dans la vue publique reste vert.
 
 - **Rouge**
+
+<img width="605" height="480" alt="image" src="https://github.com/user-attachments/assets/4b1e08f4-d000-4cc6-9331-2b41d95116c8" />
 
 La couleur rouge indique que l’institution financière n’a pas respecté les règles métier de gestion des dossiers pendant 6 mois consécutifs et que sa période d’amélioration est terminée.
 
@@ -1563,6 +1662,8 @@ Ce score rouge est visible dans la vue personnelle et dans la vue publique.
 À la fin de la période de calibration, les utilisateurs de Case Management peuvent accéder à la vue publique afin d’analyser le statut de conformité des autres contreparties utilisant Case Management.
 
 Ils peuvent également consulter le nombre de mois pendant lesquels chaque contrepartie a été conforme ou non aux règles métier.
+
+<img width="628" height="483" alt="image" src="https://github.com/user-attachments/assets/e1e97635-55d5-40fb-aa1f-fe3c46e4295e" />
 
 ## 3.19 Score Swift Go
 
@@ -1616,6 +1717,8 @@ L’interface graphique Basic Tracker comporte deux sections :
 - **My Swift Go score** : affiche votre propre indice de qualité Swift Go pour le BIC sélectionné dans la liste déroulante.
 - **Other banks' Swift Go compliance** : affiche le statut de conformité Swift Go des autres clients Swift Go disposant du statut Live.
 
+<img width="628" height="177" alt="image" src="https://github.com/user-attachments/assets/5d7435a1-cd5b-42e1-ba57-8d31c512be34" />
+
 ### Période de calibration et seuils Swift Go
 
 L’indice de qualité Swift Go permet de déterminer le statut de conformité de chaque BIC Live de 8 caractères.
@@ -1626,9 +1729,13 @@ Si, à l’issue de cette période de trois mois, l’indice de qualité reste i
 
 - **Vert**
 
+<img width="605" height="240" alt="image" src="https://github.com/user-attachments/assets/b716e965-864e-4429-9b27-6dff6ff2db06" />
+
 Le statut vert indique que l’indice de qualité Swift Go du client est égal ou supérieur à 90 %. Cela signifie que le client respecte les règles métier Swift Go définies dans le *Swift Go Rulebook*.
 
 - **Orange**
+
+<img width="605" height="271" alt="image" src="https://github.com/user-attachments/assets/2797993f-88ad-42bf-b86b-98ea73c5e4e5" />
 
 Le statut orange indique que l’indice de qualité Swift Go du client est inférieur à 90 %. Cela signifie que le client ne respecte pas les règles métier Swift Go, mais qu’il se trouve encore dans sa période d’amélioration, fixée à trois mois.
 
@@ -1637,6 +1744,8 @@ La période d’amélioration de trois mois est réinitialisée dès que le clie
 **Remarque :** Le statut orange est uniquement affiché dans la vue du client. Pendant cette période, le statut dans la vue publique reste vert.
 
 - **Rouge**
+
+<img width="605" height="276" alt="image" src="https://github.com/user-attachments/assets/1c4f9218-c981-4df0-bda7-0b763d78c59a" />
 
 Le statut rouge indique que le client n’a pas respecté les règles métier Swift Go pendant trois mois consécutifs et que sa période d’amélioration est terminée.
 
@@ -1676,21 +1785,33 @@ Une fois cette fonctionnalité activée, Tracker génère des notifications d’
 
 Différents cas d’utilisation peuvent être distingués. Ils sont présentés dans les sous-sections suivantes.
 
+<img width="628" height="446" alt="image" src="https://github.com/user-attachments/assets/ac674fef-1f9d-47c8-afed-2aa74e7756ba" />
+
 ### Alertes liées aux messages de paiement MT 103 invalides
 
 La banque B envoie un message de paiement de transfert de crédit client invalide, au format MT 103 ou pacs.008 (1), et a configuré Basic Tracker pour générer des messages d’alerte ISO MX trck.003.
+
+<img width="654" height="378" alt="image" src="https://github.com/user-attachments/assets/f3d69f62-ef84-4318-9c8e-186f10de292d" />
 
 ### Alertes liées aux messages de confirmation invalides
 
 La banque B envoie un message de confirmation invalide, au format MT 199 ou ISO FINplus trck.001 (2), et a configuré Basic Tracker pour générer des alertes FIN MT 199.
 
+<img width="654" height="378" alt="image" src="https://github.com/user-attachments/assets/fb19d45e-6d64-4ab7-ab29-12f9d0df4002" />
+
 ### Paramètres des alertes
 
 Basic Tracker dispose d’un écran d’administration dédié qui permet d’activer et de gérer les notifications d’alerte.
 
+<img width="628" height="533" alt="image" src="https://github.com/user-attachments/assets/e1d03c5e-2627-4077-8d54-aaa028ad4f0d" /> <br>
+
+<img width="628" height="111" alt="image" src="https://github.com/user-attachments/assets/47fb1e55-f987-4569-a03b-9ed9ed5a9323" />
+
 **Remarque :** Vous devez disposer du rôle RBAC **Admin** pour accéder aux paramètres des notifications d’alerte et les modifier.
 
 Les clients dont les BIC sont provisionnés sur Swift Go peuvent activer ou désactiver toutes les alertes liées à Swift Go en bas de l’onglet **Payment alert**.
+
+<img width="628" height="179" alt="image" src="https://github.com/user-attachments/assets/04672f0f-4065-4385-bfef-58e7b72f824f" />
 
 Les utilisateurs peuvent configurer Basic Tracker pour envoyer des notifications d’alerte de type **INVALID** (invalide) ou **WARNING** (avertissement).
 
@@ -1698,6 +1819,8 @@ Les messages d’alerte MT 199 sont envoyés par :
 
 - **TRCKCHZZVAL** en environnement Live ;
 - **TRCKCHZ0VAL** en environnement de test.
+
+<img width="628" height="207" alt="image" src="https://github.com/user-attachments/assets/e7be2482-70c3-4f8d-9171-20d473034f24" />
 
 Pour plus d’informations sur le format des notifications d’alerte, ainsi que sur les codes de statut et les codes de motif, consultez le *Universal Confirmations Rulebook*.
 
@@ -1710,7 +1833,7 @@ Une seule autorisation RMA couvre les deux flux, puisqu’elle est établie au n
 
 Pour plus d’informations sur RMA, consultez la documentation *Relationship Management Application in RMA Service - Service Description*.
 
-## Notifications Stop and Recall (SRP)
+### Notifications Stop and Recall (SRP)
 
 Les clients non-GPI ayant souscrit à Case Management peuvent bénéficier des notifications SRP.
 
@@ -1735,7 +1858,11 @@ Les paramètres précédents déterminent si Basic Tracker effectue une traducti
 
 Les utilisateurs peuvent également déterminer s’ils souhaitent recevoir une notification de changement de statut d’une demande SRP au moyen d’un message MT 199.
 
-## Approbation à quatre yeux (4-eyes approval)
+<img width="628" height="194" alt="image" src="https://github.com/user-attachments/assets/e06a741e-a8c0-4dbf-98ab-d17969353b4b" /> <br>
+
+<img width="628" height="135" alt="image" src="https://github.com/user-attachments/assets/c15e9aea-8fe3-44f3-b5ed-c25408aa5edb" />
+
+### Approbation à quatre yeux (4-eyes approval)
 
 Basic Tracker prend en charge la fonctionnalité d’approbation à quatre yeux.
 
@@ -1743,7 +1870,7 @@ Lorsqu’elle est activée, un utilisateur peut lancer le processus de confirmat
 
 Si le paramètre d’approbation à quatre yeux est activé, au moins deux utilisateurs doivent ensuite être définis.
 
-## Paramètres de l’approbation à quatre yeux
+### Paramètres de l’approbation à quatre yeux
 
 En plus de la configuration des paramètres des notifications d’alerte, les utilisateurs disposant du rôle Administrateur peuvent également activer ou désactiver le processus d’approbation à quatre yeux.
 
@@ -1751,7 +1878,11 @@ Si ce paramètre est activé, au moins deux utilisateurs doivent ensuite être d
 
 **Remarque :** Par défaut, le paramètre d’approbation à quatre yeux est activé.
 
+<img width="628" height="147" alt="image" src="https://github.com/user-attachments/assets/989085d0-af01-4be6-bf4f-fe2fa11053a1" />
+
 **Remarque :** Vous devez disposer du rôle RBAC **Admin** pour accéder aux paramètres d’approbation à quatre yeux et les modifier.
+
+<img width="537" height="177" alt="image" src="https://github.com/user-attachments/assets/19827429-d524-4104-a6e6-59c113d3150f" />
 
 ---
 
