@@ -290,6 +290,10 @@ Les navigateurs pris en charge sont :
 
 Lorsque l’utilisateur accède à la GUI Basic Tracker via **SwiftNet**, le navigateur doit être correctement configuré.
 
+### 2.1.3 Exigences relatives à l’interface Swift Web Access (Applicable aux certificats basés sur HSM)
+
+Le Basic Tracker a été qualifié avec Alliance Web Platform Server-Embedded, en utilisant le Swift Web Access GUI Package.
+
 ### 2.1.4 Exigences de contrôle d’accès
 
 Les certificats **SwiftNet PKI** utilisés par les utilisateurs finaux doivent être configurés avec les rôles **RBAC** appropriés associés au **DN**.
